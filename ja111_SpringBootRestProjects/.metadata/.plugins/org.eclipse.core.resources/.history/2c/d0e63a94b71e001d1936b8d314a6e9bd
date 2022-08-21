@@ -1,0 +1,57 @@
+package com.masai.Model;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+@Entity
+
+public class Employee {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer eid;
+	private String nName;
+	private Integer salary;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	private Department dep;
+
+	public Integer getEid() {
+		return eid;
+	}
+
+	public void setEid(Integer eid) {
+		this.eid = eid;
+	}
+
+	public String getnName() {
+		return nName;
+	}
+
+	public void setnName(String nName) {
+		this.nName = nName;
+	}
+
+	public Integer getSalary() {
+		return salary;
+	}
+
+	public void setSalary(Integer salary) {
+		this.salary = salary;
+	}
+
+	public Department getDep() {
+		return dep;
+	}
+
+	public void setDep(Department dep) {
+		this.dep = dep;
+	}
+	
+	
+	
+	
+}

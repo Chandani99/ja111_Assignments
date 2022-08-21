@@ -1,0 +1,55 @@
+package com.masai.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.masai.Model.Employee;
+import com.masai.Repository.DepartmentRepo;
+import com.masai.Repository.EmployeeRepo;
+
+public class EmployeeServiceImpl implements EmployeeService{
+	
+	@Autowired
+    private	EmployeeRepo eDao;
+    
+	@Autowired
+    private DepartmentRepo depDao;
+
+	@Override
+	public List<Employee> viewAllEmployee() {
+
+        List<Employee> allEmp=eDao.findAll();
+		return allEmp;
+	}
+
+	@Override
+	public Employee addEmployee(Employee employee) {
+		depDao.save(employee.getDep());
+		eDao.save(employee);
+		return employee;
+	}
+
+	@Override
+	public Employee updateEmployee(Integer eId, Employee employee) {
+		Optional<Employee> employees=eDao.findById(eId);
+		Employee emp=employees.get();
+		emp.setEid(eId);
+		eDao.save()
+		return null;
+	}
+
+	@Override
+	public String deleteEmployee(Integer eid) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> viewAllEmployeeByDeptName(String deptNmae) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,69 @@
+package com.masai.Model;
+
+import java.util.List;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+@Entity
+public class Department {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+     private Integer depId;
+	
+//	@NotNull(message = "Department name should not be null")
+	@Pattern(regexp = "[A-Za-z]")
+	private String depName;
+	
+//	@NotNull(message = "Location name should not be null")
+	@Pattern(regexp = "[A-Za-z0-9]")
+    private String location;
+    
+    @OneToMany(cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Employee> emp;
+	
+     public Integer getDepId() {
+		return depId;
+	}
+
+	public void setDepId(Integer depId) {
+		this.depId = depId;
+	}
+
+	public String getDepName() {
+		return depName;
+	}
+
+	public void setDepName(String depName) {
+		this.depName = depName;
+	}
+
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+	public List<Employee> getEmp() {
+		return emp;
+	}
+
+	public void setEmp(List<Employee> emp) {
+		this.emp = emp;
+	}
+
+	
+
+	
+}
