@@ -1,0 +1,14 @@
+package Question1;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class FileReadNIO {
+
+	public static void main(String[] args) {
+		Path p=Paths.get("d://abc.txt");
+		
+
+	}
+
+}

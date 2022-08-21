@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;RegExpression.java&apos; to &apos;Day12_Assignment/src/RegExpress&apos;&#x0D;&#x0A;- Original project: &apos;Day12_Assignment&apos;&#x0D;&#x0A;- Destination element: &apos;Day12_Assignment/src/RegExpress&apos;&#x0D;&#x0A;- Original element: &apos;CitizenPackage.RegExpression.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;RegExpress" element1="/src&lt;CitizenPackage{RegExpression.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1654371408054" units="1" version="1.0"/>
+</session>

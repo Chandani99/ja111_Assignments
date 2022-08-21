@@ -1,0 +1,22 @@
+package binarySearch;
+
+public class Salution {
+	 int binarysearch(int arr[], int n, int k) {
+	      int left=0; 
+	      int right=n-1;
+	      int ans=-1;
+	      while(left<=right){
+	              int mid=(left+(right-left))/2;
+	              if(arr[mid]>k){
+	                  right=mid-1;
+	              }
+	              else if(arr[mid]<k){
+	                  left=mid+1;
+	              }
+	              else if(arr[mid]==k){
+	                  ans= mid;
+	              }
+	       }
+		return ans;
+	    }
+}

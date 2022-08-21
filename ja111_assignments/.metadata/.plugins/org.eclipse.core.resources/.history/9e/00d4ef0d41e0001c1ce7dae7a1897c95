@@ -1,0 +1,26 @@
+package carBean;
+
+public class Ola {
+	public Car bookCar(int numberOfPassenger, int numberOfKMs) {
+		if(numberOfPassenger<=3) {
+			Sedan sd=new Sedan();
+			return sd;
+		}
+		HatchBack hb=new HatchBack();
+		return hb;
+	}
+
+	public int calculateBill(Car car) {
+		HatchBack hb1= new HatchBack();
+		
+		if(car==hb1){
+			int total1=car.getNumberOfPassenger()*hb1.farePerKm;
+			return total1;
+        }
+		Sedan sd=new Sedan();
+		int total=car.getNumberOfPassenger()*sd.farePerKm;
+		
+		return total;
+	}
+	
+}

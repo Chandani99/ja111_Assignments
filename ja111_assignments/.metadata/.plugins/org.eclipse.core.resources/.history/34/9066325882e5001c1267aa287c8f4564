@@ -1,0 +1,16 @@
+package Question_2;
+   
+public class Loan {
+	 public double calculateLoanAmount(Employee employeeObj) {
+		 if(employeeObj instanceof PermanentEmployee) {
+			 PermanentEmployee p;
+//			 /double amount= p.getSalary();
+			 
+		 }
+		 else if(employeeObj instanceof TemporaryEmployee) {
+			 
+		 }
+		return 0;
+	    	
+	    }
+}

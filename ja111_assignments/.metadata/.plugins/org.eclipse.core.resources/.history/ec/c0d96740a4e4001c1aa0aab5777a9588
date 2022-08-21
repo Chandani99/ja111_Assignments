@@ -1,0 +1,44 @@
+package EnumPackage;
+
+import java.util.Scanner;
+
+public class IPL {
+	public void homeTeamStadium(Stadium stadium){
+		try {
+		switch(stadium.toString()) {
+		case "EDEN_GARDENS_STADIUM":
+			System.out.println("This is the home ground of KKR");
+			break;
+		case "WANKHEDE_STADIUM":
+			System.out.println("This is the home ground of Mumbai Indians");
+			break;
+		case "CHIDAMBARAM_STADIUM":
+			System.out.println("This is the home ground of CSK");
+			break;
+		case "M_CHINNASWAMY_STADIUM":
+			System.out.println("This is the home ground of RCB");
+			break;
+		default:
+			System.out.println("Please enter valid stadium");
+			break;
+		}
+		}
+		catch(IllegalArgumentException iae) {
+			System.out.println("Please enter valid stadium");
+		}
+		
+	}
+	public static void main(String[] args) {
+		IPL ipl=new IPL();
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter Stadium..");
+		String sta=sc.next();
+		
+		Stadium stad=Stadium.valueOf(sta);
+		
+		ipl.homeTeamStadium(stad);
+		// TODO Auto-generated method stub
+
+	}
+
+}

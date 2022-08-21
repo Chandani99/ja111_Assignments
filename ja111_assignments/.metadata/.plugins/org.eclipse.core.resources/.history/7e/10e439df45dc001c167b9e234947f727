@@ -1,0 +1,42 @@
+package com.day7;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class Student{
+	int studId ; 
+	String studName ;
+	double examFee;	
+	public Student(int studId2,String studName2,double examFee2) {
+		this.studId=studId2;
+		this.studName=studName2;
+		this.examFee=examFee2;
+	}
+	public void displayDetails() {
+		System.out.println("Name: "+studId);
+		System.out.println("Age: "+studName);	
+		System.out.println("PhoneNumber: "+examFee);	
+		
+	}
+	public double payFee(double examFee){
+		return examFee;
+	}
+}
+
+class DayScholar extends Student {
+	double transportFee;
+    public 	DayScholar(int studId2,String studName2,double examFee2,double transportFee2) {
+    	super(studId2,studName2,examFee2);
+    	this.transportFee=transportFee2;
+    }
+}
+
+class Hostlar extends Student{
+	
+}

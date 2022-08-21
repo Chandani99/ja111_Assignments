@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;SumOfNaturalNum.java&apos; to &apos;dsa/src/recursion&apos;&#x0D;&#x0A;- Original project: &apos;dsa&apos;&#x0D;&#x0A;- Destination element: &apos;dsa/src/recursion&apos;&#x0D;&#x0A;- Original element: &apos;Unit2_week1.SumOfNaturalNum.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;recursion" element1="/src&lt;Unit2_week1{SumOfNaturalNum.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1658816871619" units="1" version="1.0"/>
+</session>

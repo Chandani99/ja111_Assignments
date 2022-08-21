@@ -1,0 +1,50 @@
+package com.day7;
+
+public class BankMain {
+	public static Bank getBank(String bank) {
+		if(bank=="axis") {
+			Axis ax=new Axis();
+			return ax;
+		}else if(bank=="icici") {
+			ICICI ic=new ICICI();
+			return  ic;
+		}
+		return null;
+	}
+	public static void main(String[] args) {
+		System.out.println(getBank("axis"));
+
+	}
+
+}
+class Bank{
+	String branchName; 
+	String ifscCode; 
+	
+
+	void displayDetails() {
+		System.out.println("Branch Name: "+branchName);
+		System.out.println("IFSC Code: "+ifscCode);
+	}
+}
+class ICICI extends Bank{
+	double rateOfInterest;
+	void displayDetails() {
+		System.out.println("Branch Name: "+super.branchName);
+		System.out.println("IFSC Code: "+super.ifscCode);
+		System.out.println("Rate of Interest: "+rateOfInterest);
+	}
+}
+class Axis extends Bank{
+	double rateOfInterest; 
+	void displayDetails() {
+		System.out.println("Branch Name: "+super.branchName);
+		System.out.println("IFSC Code: "+super.ifscCode);
+		System.out.println("Rate of Interest: "+rateOfInterest);
+	}
+	public void getCreditCard() {
+		System.out.println("Get the Credit Card from the Axis bank");
+	}
+}
+
+

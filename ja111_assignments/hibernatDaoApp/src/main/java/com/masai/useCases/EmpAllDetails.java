@@ -1,0 +1,21 @@
+package com.masai.useCases;
+
+import java.util.List;
+
+import com.masai.Dao.EmployeeDao;
+import com.masai.Dao.EmployeeDaoImpl;
+import com.masai.Entity.Emp;
+
+public class EmpAllDetails {
+
+	public static void main(String[] args) {
+		EmployeeDao ed=new EmployeeDaoImpl();
+		List<Emp> employee=	ed.getAllEmployee();
+//		System.out.println(employee);
+		for(Emp e:employee) {
+			System.out.println(e);
+		}
+
+	}
+
+}

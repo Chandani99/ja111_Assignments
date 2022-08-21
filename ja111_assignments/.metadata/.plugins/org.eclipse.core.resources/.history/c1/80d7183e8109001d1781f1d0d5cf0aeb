@@ -1,0 +1,86 @@
+package com.masai.BookDao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import com.masai.Entities.Book;
+import com.masai.Entities.Book_Genre;
+import com.masai.Exceptions.BookNotFound;
+import com.masai.Exceptions.GenreNotFound;
+import com.masai.utility.GetEntityManager;
+
+public class LibraryDaoImpl implements LibraryDao {
+
+	@Override
+	public boolean addBook(Book book) {
+		EntityManager em=GetEntityManager.provideEntityManager();
+	
+		em.getTransaction().begin();
+		em.persist(book);
+		em.getTransaction().commit();
+		em.close();
+		
+		return true;
+	}
+
+	@Override
+	public boolean addGenre(Book_Genre bookGenre) {
+		EntityManager em=GetEntityManager.provideEntityManager();
+		em.getTransaction().begin();
+		em.persist(bookGenre);
+		em.getTransaction().commit();
+		em.close();
+		return false;
+	}
+
+	@Override
+	public List<Book> getBooksByGenre(String genre) throws GenreNotFound {
+		EntityManager em=GetEntityManager.provideEntityManager();
+		Query query=em.createQuery("Select from Book_Genre where genre_name:genre ");
+		query.setParameter(1, genre);
+		List<Book> b=query.getResultList();
+		
+		return b;
+	}
+
+	@Override
+	public String updateAuthorName(String bookName, String authorName) throws BookNotFound {
+		String msg="Not done";
+		EntityManager em=GetEntityManager.provideEntityManager();
+		Query query=em.createQuery("Update Book set author_name:authorName where book_name:bookName ");
+		int x=query.executeUpdate();
+		msg="done";
+		return msg;
+	}
+
+	@Override
+	public void removeGenre(String genre) throws GenreNotFound {
+		EntityManager em=GetEntityManager.provideEntityManager();
+		Query query=em.createQuery("select from Book_Genre where genre_name:genre ");
+		query.setParameter(1, genre);
+		List<Book_Genre> list= query.getResultList();
+		em.getTransaction().begin();
+		em.remove(list);
+		em.getTransaction().commit();
+		em.close();
+		
+	}
+
+	@Override
+	public void removeBook(String bookName) throws BookNotFound {
+		EntityManager em=GetEntityManager.provideEntityManager();
+		Query query=em.createQuery("select from Book where book_name:bookName ");
+		query.setParameter(1, bookName);
+		List<Book> book=query.getResultList();
+		em.getTransaction().begin();
+		em.remove(book);
+		em.getTransaction().commit();
+		em.close();
+		
+		
+		
+	}
+
+}

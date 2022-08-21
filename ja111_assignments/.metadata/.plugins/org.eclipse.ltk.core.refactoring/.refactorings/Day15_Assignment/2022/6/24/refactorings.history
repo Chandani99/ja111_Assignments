@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Question1.FindDays&apos; to &apos;FindAge&apos;&#x0D;&#x0A;- Original project: &apos;Day15_Assignment&apos;&#x0D;&#x0A;- Original element: &apos;Question1.FindDays&apos;&#x0D;&#x0A;- Renamed element: &apos;Question1.FindAge&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;FindDays&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;Question1{FindDays.java[FindDays" matchStrategy="1" name="FindAge" qualified="false" references="true" similarDeclarations="false" stamp="1654874710319" textual="false" version="1.0"/>
+</session>
