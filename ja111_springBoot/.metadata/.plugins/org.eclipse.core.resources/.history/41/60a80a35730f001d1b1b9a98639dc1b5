@@ -1,0 +1,38 @@
+
+
+Tight Coupling ->
+=====================
+A Tightly Coupled Object is an object that needs to know quite a bit about other objects and are usually highly dependent on each other's interfaces. 
+Changing one object in a tightly coupled application often requires changes to a number of other objects. 
+In a small application we can easily identify the changes and there is less chance to miss anything. 
+But in large applications these inter-dependencies are not always known by every programmer or there is a chance of overlooking changes. 
+But each set of loosely coupled objects are not dependent on each other. 
+
+Difficulties
+------------
+Tight Coupling creates some difficulties. Here, the task of the control object, 
+the object needs to be able to television, the television remote control is dependent on the other phrase. 
+So, what's the harm of the following dependencies:
+
+1.	TV without a remote control does not work.
+
+2.	TV changes the control directly affected by this change.
+
+3.	The Control can only control the TV, cannot control other devices.
+
+Loose Coupling ->
+=====================
+Loose coupling is a design goal that seeks to reduce the inter-dependencies between 
+components of a system with the goal of reducing the risk that changes in one component will 
+require changes in any other component. Loose coupling is a much more generic concept intended 
+to increase the flexibility of a system, make it more maintainable, and makes 
+the entire framework more "stable".
+
+Advantages
+----------
+It will save you a lot of time for any project that isn't trivially small, 
+where I define trivially small as less than a couple thousand lines of code 
+(depending on the language). The reason is that once you get past super small projects, 
+each change or update gets harder the more tightly coupled it is. 
+Being loosely coupled enables you to keep moving forward, adding features, fixing bugs, etc.
+

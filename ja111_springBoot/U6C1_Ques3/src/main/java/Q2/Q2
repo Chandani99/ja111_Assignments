@@ -1,0 +1,45 @@
+Stereotype annotations:
+-----------------------
+
+It is a special type of annotation that indicates the "role of a class" in a project.
+There are only 4 type of annotations-
+1. @Component
+2. @Service
+3. @Repository
+4. @Controller
+
+1 -  @Component-
+=================
+This is the t is the base/super annotation of the remaining 3.
+
+2 - @Servise-
+==============
+It indicates that this class is a service layer class which means, this class contains the main business logic.
+
+3 - @Repository-
+================
+It indicates that this class is a Data access layer class, i.e. this class contains the data access logic/ persistence logic.
+
+4 - @Controller-
+================
+It indicates that this class is a controller layer/presentation layer, which contains logic to control the flow of our application or contains the presentation logic.
+
+Example-
+--------
+package com.masai;
+@Service
+public class A{
+}
+package com.masai.services;
+@Component
+public class B{
+}
+package com.abc;
+@Repository
+public class {
+}
+package com.masai.repo;
+public class D{
+}
+<context:component-scan base-package="com.masai" />
+

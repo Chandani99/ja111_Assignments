@@ -1,0 +1,12 @@
+Answer 1:
+====================================
+--> Spring IOC is a container and a framework for implementing automated dependency injection. 
+--> It contains object creation for the longer ways to use and injects dependencies within the class. 
+--> The IoC container constructs an object of the selected class and also injects all the dependency objects 
+    via a constructor, a property, or a function at execution time and disposes it at a suitable time. 
+--> This approach helps to create and manage objects manually.
+
+Uses ->
+--> IoC Container is the core of Spring Framework.
+--> It is used to creates the objects, configure and assembles their dependencies, manages their entire life cycle. 
+--> It uses Dependency Injection(DI) to manage the components that make up the application.
