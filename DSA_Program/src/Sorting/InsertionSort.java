@@ -1,6 +1,7 @@
 package Sorting;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Stack;
 
 public class InsertionSort {
@@ -38,6 +39,8 @@ public class InsertionSort {
 	}
 	public static void main(String[] args) {
 		int [] arr= {12, 31, 25, 8, 32, 17};
+		
+		
 		int n=arr.length;
 		System.out.println(Arrays.toString(findNearestGreater(arr,n)));
 		System.out.println(Arrays.toString(insertionSort(arr,n)));

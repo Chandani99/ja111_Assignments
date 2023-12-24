@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ja111_assignments/JDBC_DAO_Assignments/bin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ja111_assignments/JDBC_DAO_Assignments/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ja111_assignments/SB101_C1/bin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ja111_assignments/SB101_C1/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ja111_assignments/jdbc_Dao_Eval/bin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ja111_assignments/jdbc_Dao_Eval/src" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ja111_assignments/jdbc_app/bin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ja111_assignments/jdbc_app/src" vcs="Git" />
+  </component>
+</project>
